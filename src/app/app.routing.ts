@@ -47,6 +47,11 @@ import { CommissionDashboardComponent } from './nuaxess/commission-dashboard/com
 import { ProspectListComponent } from './nuaxess/prospect-list/prospect-list.component';
 import { ProspectDashboardComponent } from './nuaxess/prospect-dashboard/prospect-dashboard.component';
 import { OrgProfileComponent } from './nuaxess/org-profile/org-profile.component';
+import { PlanListComponent } from './nuaxess/plan-list/plan-list.component';
+import { AdditionlistComponent } from './nuaxess/additionlist/additionlist.component';
+import { TerminationListComponent } from './nuaxess/termination-list/termination-list.component';
+import { AdditionListComponent } from './nuaxess/addition-list/addition-list.component';
+import { MemberListComponent } from './nuaxess/member-list/member-list.component';
 
 // @formatter:off
 /* eslint-disable max-len */
@@ -109,6 +114,8 @@ export const appRoutes: Route[] = [
             {path: 'enrolling-list/:id', component: CompanyListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             {path: 'admin-enrolling-list', component: CompanyListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             {path: 'admin-enrolling-list/:id', component: CompanyListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
+            {path: 'plan-list', component: PlanListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
+            {path: 'member-list', component: MemberListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             //-- Quotes
             {path: 'quote-list', component: QuoteListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             {path: 'quote-list/:id', component: QuoteListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
@@ -116,6 +123,9 @@ export const appRoutes: Route[] = [
             {path: 'admin-quote-list', component: QuoteListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             {path: 'admin-quote-list/:id', component: QuoteListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             {path: 'admin-quote-list/:id/:id2', component: QuoteListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
+            {path: 'addition-list', component: AdditionListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
+            {path: 'termination-list', component: TerminationListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
+            {path: 'termination-list', component: TerminationListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             //-- Commissions
             {path: 'commission-list', component: CommissionListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             {path: 'admin-commission-list', component: CommissionListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },

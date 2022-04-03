@@ -77,7 +77,7 @@
              <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 p-4">
-                        <h1 style="font-size: 24px; font-weight: bold;">Home Page</h1>
+                        <h1 style="font-size: 24px; font-weight: bold;">Home Page - {{ data.company['company_name'] }}</h1>
                     </div>
                 </div>
             </div>
@@ -126,7 +126,7 @@
                                     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full min-w-0">
                                         <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
                                             <div class="flex items-start justify-between">
-                                                <div [routerLink]="['/company-list']" class="text-lg font-medium tracking-tight leading-6 truncate">Active Clients</div>
+                                                <div class="text-lg font-medium tracking-tight leading-6 truncate">Enrollment</div>
                                                 <div class="ml-2 -mt-2 -mr-3">
                                                     <button
                                                         mat-icon-button
@@ -136,19 +136,19 @@
                                                             [svgIcon]="'heroicons_solid:dots-vertical'"></mat-icon>
                                                     </button>
                                                     <mat-menu #summaryMenu="matMenu">
-                                                        <button [routerLink]="['/company-list']" mat-menu-item>All Company List</button>
+                                                       
                                                     </mat-menu>
                                                 </div>
                                             </div>
                                             <div class="flex flex-col items-center mt-2">                                                
-                                                <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-blue-500">{{ data.active_count }}</div>
-                                                <div class="text-lg font-medium text-blue-600 dark:text-blue-500">Active</div>
+                                                <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-blue-500">{{ data.member_count }}</div>
+                                                <div class="text-lg font-medium text-blue-600 dark:text-blue-500">{{ data.month_id }}</div>
                                             </div>
                                         </div>
                                         <!-- Overdue -->
                                         <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
                                             <div class="flex items-start justify-between">
-                                                <div [routerLink]="['/quote-list']"  class="text-lg font-medium tracking-tight leading-6 truncate">Quotes</div>
+                                                <div [routerLink]="['/quote-list']"  class="text-lg font-medium tracking-tight leading-6 truncate">Additions</div>
                                                 <div class="ml-2 -mt-2 -mr-3">
                                                     <button
                                                         mat-icon-button
@@ -163,8 +163,8 @@
                                                 </div>
                                             </div>
                                             <div class="flex flex-col items-center mt-2">
-                                                <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-red-500">{{ data.quote_count }}</div>
-                                                <div class="text-lg font-medium text-red-600 dark:text-red-500">Quotes</div>
+                                                <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-red-500">{{ data.addition_count }}</div>
+                                                <div class="text-lg font-medium text-red-600 dark:text-red-500">{{ data.month_id2 }}</div>
                                                 <div class="flex items-baseline justify-center w-full mt-5 text-secondary">
   
                                                 </div>
@@ -173,7 +173,7 @@
                                         <!-- Issues -->
                                         <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
                                             <div class="flex items-start justify-between">
-                                                <div class="text-lg font-medium tracking-tight leading-6 truncate">Prospects</div>
+                                                <div class="text-lg font-medium tracking-tight leading-6 truncate">Terminations</div>
                                                 <div class="ml-2 -mt-2 -mr-3">
                                                     <button
                                                         mat-icon-button
@@ -183,22 +183,19 @@
                                                             [svgIcon]="'heroicons_solid:dots-vertical'"></mat-icon>
                                                     </button>
                                                     <mat-menu #issuesMenu="matMenu">
-                                                        <button [routerLink]="['/user-list/active']" mat-menu-item>Prospects</button>
-                                                        <button [routerLink]="['/quote-list/pending']" mat-menu-item>Pending Enrollment</button>
-                                                        <button [routerLink]="['/quote-list/reset']" mat-menu-item>In Password Reset</button>
-                                                        <button [routerLink]="['/quote-list/locked']" mat-menu-item>Locked</button>
+
                                                     </mat-menu>
                                                 </div>
                                             </div>
                                             <div class="flex flex-col items-center mt-2">
-                                                <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-amber-500">{{ data.prospect_count }}</div>
-                                                <div class="text-lg font-medium text-amber-600 dark:text-amber-500">Prospects</div>
+                                                <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-amber-500">{{ data.termination_count }}</div>
+                                                <div class="text-lg font-medium text-amber-600 dark:text-amber-500">{{ data.month_id2 }}</div>
                                             </div>
                                         </div>
                                         <!-- Features -->
                                         <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
                                             <div class="flex items-start justify-between">
-                                                <div class="text-lg font-medium tracking-tight leading-6 truncate">Enrolled / Enrolling</div>
+                                                <div class="text-lg font-medium tracking-tight leading-6 truncate">Plans</div>
                                                 <div class="ml-2 -mt-2 -mr-3">
                                                     <button
                                                         mat-icon-button
@@ -208,14 +205,13 @@
                                                             [svgIcon]="'heroicons_solid:dots-vertical'"></mat-icon>
                                                     </button>
                                                     <mat-menu #featuresMenu="matMenu">
-                                                        <button [routerLink]="['/member-list/enrolling']" mat-menu-item>In Enrollement</button>
-                                                        <button [routerLink]="['/member-list/completed']" mat-menu-item>Enrollment Completed</button>
+
                                                     </mat-menu>
                                                 </div>
                                             </div>
                                             <div class="flex flex-col items-center mt-2"> 
-                                                <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-green-500">{{ data.enrolled_count }}</div>
-                                                <div class="text-lg font-medium text-green-600 dark:text-green-500">Members</div>
+                                                <div class="text-7xl sm:text-8xl font-bold tracking-tight leading-none text-green-500">{{ data.plan_count }}</div>
+                                                <div class="text-lg font-medium text-green-600 dark:text-green-500">Active</div>
                                             </div>
                                         </div>
                                     </div>
@@ -230,7 +226,7 @@
                         <div class="flex-1 min-w-0">
                             <div class="mt-2">
                                 <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
-                                    <button class="btn btn-primary" [routerLink]="['/add-company/data.user.org_id']">Add Prospect</button>
+                                    <button class="btn btn-primary" [routerLink]="['/add-member']">Add Member</button>
                                 </h2>
                             </div>
                         </div>
@@ -300,182 +296,112 @@
                         </div>
                     </div>
                 </div>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-6">
+                
                                 <div class="card card-body" style="margin-top: 20px;">
                                 <div class="row">
-                                <div class="col-md-12">
-                                        <div class="table-responsive">
-                                            <div class="row">
-                                                <div class="col-xl-9"><h1 style="font-size: 24px; font-weight: bold;">Prospects</h1></div>
-                                                <div class="col-xl-3">
-                                                    <button *ngIf="prospects=='N'" class="btn" (click)="showProspects()">Show ({{ data.prospects.length }})</button>
-                                                    <button *ngIf="prospects=='Y'" class="btn" (click)="showProspects()">Hide</button>
-                                                </div>
-                                            </div>
-                                            
-                                            <div *ngIf="prospects=='Y'" class="col-lg-6 py-2">
+                                    <div class="col-md-12 col-xl-12">
+                                        <div *ngIf="data.census.length>0" class="card card-body" style="margin-top:20px;">
+                                            <div class="table-responsive">
+                                                <h2 style="font-size: 24px;"><b>Active Members ({{ data.month_id }})</b></h2>
+                                            <div class="col-lg-6 py-2">
                                                 Search: <input style="max-width:320px;" class="form-control" type="text" id="term" name="term" [(ngModel)]="term"> 
                                             </div>
-                                            <table *ngIf="prospects=='Y'" class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                <th>ID</th>
-                                                <th>Prospect</th>
-                                                <th>Medical</th>
-                                                <th>Dental</th>
-                                                <th>Vision</th>
-                                                <th>Status</th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr *ngFor="let m of data.prospects | filter: term | paginate: { currentPage: p , itemsPerPage: 25}" [ngStyle]="{'background-color':m.status !== 'quoted' ? '#FFFFFF' : '#3399FF' }">  
-                                                <td>{{ m.id }}</td>
-                                                <td>{{ m.company_name }}</td>
-                                                <td>{{ m.medical }}</td>
-                                                <td>{{ m.dental }}</td>
-                                                <td>{{ m.vision }}</td>
-                                                <td>{{ m.status }}</td>
-                                                <td><button [routerLink]="['/company-dashboard',m.id]" class="btn btn-primary">View</button></td>
-                                                <td><button (click)="getProfile(m.id,m.status)" class="btn">(Get XLSX)</button></td>
-                                            </tr>
-                                            </tbody>
-                                            </table>
-                                </div>
+                                            <table class="table table-responsive">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            Employee ID
+                                                        </th>
+                                                        <th>
+                                                            Dependent ID
+                                                        </th>
+                                                        <th>
+                                                            Last Name
+                                                        </th>
+                                                        <th>
+                                                            First Name
+                                                        </th>
+                                                        <th>
+                                                            Middle Initial
+                                                        </th>
+                                                        <th>
+                                                            Gender
+                                                        </th>
+                                                        <th>
+                                                            DOB
+                                                        </th>
+                                                        <th>
+                                                            Plan
+                                                        </th>
+                                                        <th>
+                                                            Eff Date
+                                                        </th>
+                                                        <th>
+                                                            Term Date
+                                                        </th>
+                                                        <th>
+                                                            Coverage
+                                                        </th>
+                                                        <th>
+                                                            Price
+                                                        </th>
+                                                        <th>            
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                        <tbody>
+                                        <tr *ngFor="let m of data.census | filter: term ">
+                                            <td>
+                                                {{ m.employee_code }}
+                                            </td>
+                                            <td>
+                                                {{ m.dependent_code }}
+                                            </td>
+                                            <td>
+                                                {{ m.last_name }}
+                                            </td>
+                                            <td>
+                                                {{ m.first_name }}
+                                            </td>
+                                            <td>
+                                                {{ m.middle_initial }}
+                                            </td>
+                                            <td>
+                                                {{ m.gender }}
+                                            </td>
+                                            <td>
+                                                {{ m.dob }}
+                                            </td>
+                                            <td>
+                                                {{ m.client_plan }}
+                                            </td>
+                                            <td>
+                                                {{ m.eff_dt }}
+                                            </td>
+                                            <td>
+                                                {{ m.term_dt }}
+                                            </td>
+                                            <td>
+                                                {{ m.coverage_level }}
+                                            </td>
+                                            <td>
+                                                {{ m.coverage_price }}
+                                            </td>
+                                            <td>
+                                                <button  *ngIf="m.last_name!=''" [routerLink]="['/employee-dashboard',m.employee_id]" class="btn btn-primary">Dashboard</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
+                                    </div> <!-- table responsive -->
+                                    </div> <!-- Card body -->
+                                    </div> <!-- Col -->
                             
                                   
                         </div>
                         </div>
-                            </div>
-                            <!--
-                            <div class="card card-body" style="margin-top: 20px;">
-                                <div class="row">
-                                <div class="col-md-12">
-                                        <div class="table-responsive">
-                                            <div class="row">
-                                                <div class="col-xl-9"><h1 style="font-size: 24px; font-weight: bold;">Invoice Status</h1></div>
-                                                <div class="col-xl-3">
-                                                    <button *ngIf="invoices=='N'" class="btn" (click)="showInvoices()">Show ({{ data.prospects.length }})</button>
-                                                    <button *ngIf="invoices=='Y'" class="btn" (click)="showInvoices()">Hide</button>
-                                                </div>
-                                            </div>
-                                            
-                                            <div *ngIf="invoices=='Y'" class="col-lg-6 py-2">
-                                                Search: <input style="max-width:320px;" class="form-control" type="text" id="term" name="term" [(ngModel)]="term"> 
-                                            </div>
-                                            <table *ngIf="invoices=='Y'" class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                <th>ID</th>
-                                                <th>Prospect</th>
-                                                <th>Medical</th>
-                                                <th>Dental</th>
-                                                <th>Vision</th>
-                                                <th>Status</th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr *ngFor="let m of data.invoices | filter: term | paginate: { currentPage: p , itemsPerPage: 25}" [ngStyle]="{'background-color':m.status !== 'quoted' ? '#FFFFFF' : '#3399FF' }">  
-                                                <td>{{ m.id }}</td>
-                                                <td>{{ m.company_name }}</td>
-                                                <td>{{ m.medical }}</td>
-                                                <td>{{ m.dental }}</td>
-                                                <td>{{ m.vision }}</td>
-                                                <td>{{ m.status }}</td>
-                                                <td><button [routerLink]="['/company-dashboard',m.id]" class="btn btn-primary">View</button></td>
-                                                <td><button (click)="getProfile(m.id,m.status)" class="btn">(Get XLSX)</button></td>
-                                            </tr>
-                                            </tbody>
-                                            </table>
-                                </div>
-                        </div> 
-                        </div>
-                            </div> -->
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card card-body" style="margin-top: 20px;">
-                                <div class="table-responsive">
-                                    <div class="row">
-                                        <div class="col-xl-9"><h1 style="font-size: 24px; font-weight: bold;">Active Clients</h1></div>
-                                        <div class="col-xl-3">
-                                            <button *ngIf="active=='N'" class="btn" (click)="showActive()">Show ({{ data.active.length }})</button>
-                                            <button *ngIf="active=='Y'" class="btn" (click)="showActive()">Hide</button>
-                                        </div>
-                                    </div>
-                                    <div *ngIf="active=='Y'" class="col-lg-6 py-2">
-                                        Search: <input style="max-width:320px;" class="form-control" type="text" id="term" name="term" [(ngModel)]="term"> 
-                                    </div>
-                                    <table *ngIf="active=='Y'"  class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Company Name</th>
-                                                <th>Enrolled (Medical)</th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-   <!--                                        <tr *ngFor="let m of data.prospects | filter: term | paginate: { currentPage: p , itemsPerPage: 25}" [ngStyle]="{'background-color':m.bad_count === '0' ? '#FFFFFF' : '#FCE5EB' }"> -->
-                                               <tr *ngFor="let m of data.active | filter: term | paginate: { currentPage: p , itemsPerPage: 25}">
- 
-                                                <td>{{ m.id }}</td>
-                                                <td>{{ m.company_name }}</td>
-                                                <td>{{ m.active }}</td>
-                                                <td><button [routerLink]="['/company-dashboard',m.id]" class="btn btn-primary">View</button></td>
-                                                <td><button (click)="getProfile(m.id,m.status)" class="btn">(Get XLSX)</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <paging-controls *ngIf="active=='Y'" (pageChange)="p = $event" [isItemsPerPage]="false"  
-                                    class="my-pagination"></paging-controls>
-                                </div>
-                            </div>
-  <!--                          <div class="card card-body" style="margin-top: 20px;">
-                                <div class="table-responsive">
-                                    <div class="row">
-                                        <div class="col-xl-9"><h1 style="font-size: 24px; font-weight: bold;">Commission Reports</h1></div>
-                                        <div class="col-xl-3">
-                                            <button *ngIf="active=='N'" class="btn" (click)="showActive()">Show ({{ data.active.length }})</button>
-                                            <button *ngIf="active=='Y'" class="btn" (click)="showActive()">Hide</button>
-                                        </div>
-                                    </div>
-                                    <div *ngIf="active=='Y'" class="col-lg-6 py-2">
-                                        Search: <input style="max-width:320px;" class="form-control" type="text" id="term" name="term" [(ngModel)]="term"> 
-                                    </div>
-                                    <table *ngIf="active=='Y'"  class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Company Name</th>
-                                                <th>Enrolled (Medical)</th>
-                                                <th></th>
-                                                <th></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                               <tr *ngFor="let m of data.active | filter: term | paginate: { currentPage: p , itemsPerPage: 25}">
- 
-                                                <td>{{ m.id }}</td>
-                                                <td>{{ m.company_name }}</td>
-                                                <td>{{ m.active }}</td>
-                                                <td><button [routerLink]="['/company-dashboard',m.id]" class="btn btn-primary">View</button></td>
-                                                <td><button (click)="getProfile(m.id,m.status)" class="btn">(Get XLSX)</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <paging-controls *ngIf="active=='Y'" (pageChange)="p = $event" [isItemsPerPage]="false"  
-                                    class="my-pagination"></paging-controls>
-                                </div>
-                            </div>
-                            </div>
-                        </div>     -->                    
-                    </div>
+                             
+              
                 </div>
             
             </div>

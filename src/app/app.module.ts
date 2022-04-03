@@ -92,6 +92,11 @@ import { BrokerListComponent } from './nuaxess/broker-list/broker-list.component
 import { ProspectListComponent } from './nuaxess/prospect-list/prospect-list.component';
 import { ProspectDashboardComponent } from './nuaxess/prospect-dashboard/prospect-dashboard.component';
 import { OrgProfileComponent } from './nuaxess/org-profile/org-profile.component';
+import { PlanListComponent } from './nuaxess/plan-list/plan-list.component';
+import { AdditionlistComponent } from './nuaxess/additionlist/additionlist.component';
+import { AdditionListComponent } from './nuaxess/addition-list/addition-list.component';
+import { TerminationListComponent } from './nuaxess/termination-list/termination-list.component';
+import { MemberListComponent } from './nuaxess/member-list/member-list.component';
 
 const routerConfig: ExtraOptions = {
     preloadingStrategy       : PreloadAllModules,
@@ -145,7 +150,12 @@ const routerConfig: ExtraOptions = {
         BrokerListComponent,
         ProspectListComponent,
         ProspectDashboardComponent,
-        OrgProfileComponent
+        OrgProfileComponent,
+        PlanListComponent,
+        AdditionlistComponent,
+        AdditionListComponent,
+        TerminationListComponent,
+        MemberListComponent
     ],
     imports     : [
         BrowserModule,

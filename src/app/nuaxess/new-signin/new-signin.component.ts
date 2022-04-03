@@ -48,7 +48,7 @@ export class NewSigninComponent implements OnInit {
       // CHANGE THIS VARIABLE TO 'N' WHEN IN DEVELOPMENT AND TESTING
       //----------------------------------------------------------------
       let production='Y'
-      if (production=='Y') {
+      if (production=='N') {
         localStorage.removeItem('uid')
         localStorage.removeItem('role')
         location.replace('https://mynuaxess.com/#/sign-in')
@@ -175,7 +175,7 @@ export class NewSigninComponent implements OnInit {
                     this._router.navigate(['/dashboard']) 
                     location.replace('/#/dashboard');
                   }
-                if (data.role=="user") { 
+                if (data.role=="employer") { 
                     this._router.navigate(['/sadmin']) 
                     location.replace('/#/sadmin');
                   }
