@@ -65,7 +65,11 @@ export class NewSigninComponent implements OnInit {
       if (localStorage.getItem('role')=="sadmin") { 
           this._router.navigateByUrl('/sadmin'); 
           location.replace('/#/sadmin');
-        }
+      }
+      if (localStorage.getItem('role')=="employer") { 
+          this._router.navigateByUrl('/sadmin'); 
+          location.replace('/#/sadmin');
+      }
       //-- PEO Admnn
       if (localStorage.getItem('role')=="padmin") { 
          // location.replace('https://mynuaxess.com/peo/#/sadmin');

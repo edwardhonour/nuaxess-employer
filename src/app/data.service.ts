@@ -14,7 +14,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { 
 //      this.url='https://quadm.tech/data/';
-        this.url='https://myna-api.com/api/broker.php';
+        this.url='https://myna-api.com/api/employer.php';
     }
 
     postTemplate(file_data:any) {
@@ -93,7 +93,7 @@ export class DataService {
     }
 
 //  this.t= this.http.post("https://quadm.tech/data/k.php", data);
-  this.t= this.http.post("https://myna-api.com/api/broker-menu.php", data);
+  this.t= this.http.post("https://myna-api.com/api/employer-menu.php", data);
   return this.t;
 
   }
