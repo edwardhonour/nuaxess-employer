@@ -106,26 +106,25 @@
                                                             Employee ID
                                                         </th>
                                                         <th>
-                                                            Last Name
-                                                        </th>
-                                                        <th>
-                                                            First Name
-                                                        </th>
-                                                        <th>
-                                                            Middle Initial
+                                                            Name
                                                         </th>
                                                         <th>
                                                             Gender
                                                         </th>
                                                         <th>
-                                                            DOB
+                                                            Effective Date
                                                         </th>
                                                         <th>
-                                                            Hire Date
+                                                            Medical
                                                         </th>
                                                         <th>
-                                                            Contribution<br>
-                                                            Class
+                                                            Dental
+                                                        </th>
+                                                        <th>
+                                                            Vision
+                                                        </th>
+                                                        <th>
+                                                            Term Date
                                                         </th>
                                                         <th>            
                                                         </th>
@@ -137,28 +136,28 @@
                                                 {{ m.employee_code }}
                                             </td>
                                             <td>
-                                                {{ m.last_name }}
-                                            </td>
-                                            <td>
-                                                {{ m.first_name }}
-                                            </td>
-                                            <td>
-                                                {{ m.middle_name }}
+                                                {{ m.last_name }}, {{ m.first_name }} {{ m.middle_name }}
                                             </td>
                                             <td>
                                                 {{ m.gender }}
                                             </td>
                                             <td>
-                                                {{ m.dob }}
+                                                {{ m.effective_date }}
                                             </td>
                                             <td>
-                                                {{ m.date_hired }}
+                                                {{ m.medical_plan }}-{{ m.medical_plan_level }}
                                             </td>
                                             <td>
-                                                {{ m.contribution_class_level }}
+                                                {{ m.dental_plan }}-{{ m.dental_plan_level }}
                                             </td>
                                             <td>
-                                                <button  *ngIf="m.last_name!=''" [routerLink]="['/employee-dashboard',m.employee_id]" class="btn btn-primary">Dashboard</button>
+                                                {{ m.vision_plan }}-{{ m.vision_plan_level }}
+                                            </td>
+                                            <td>
+                                                {{ m.term_date }}
+                                            </td>
+                                            <td>
+                                                <button  *ngIf="m.last_name!=''" [routerLink]="['/employee-dashboard',m.id]" class="btn btn-primary">Dashboard</button>
                                             </td>
                                         </tr>
                                     </tbody>

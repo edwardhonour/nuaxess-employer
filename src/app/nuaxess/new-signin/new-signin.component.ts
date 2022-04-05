@@ -47,8 +47,8 @@ export class NewSigninComponent implements OnInit {
       // CHANGE THIS VARIABLE TO 'Y' WHEN MOVING TO PRODUCION 
       // CHANGE THIS VARIABLE TO 'N' WHEN IN DEVELOPMENT AND TESTING
       //----------------------------------------------------------------
-      let production='Y'
-      if (production=='N') {
+      let production='N'
+      if (production=='Y') {
         localStorage.removeItem('uid')
         localStorage.removeItem('role')
         location.replace('https://mynuaxess.com/#/sign-in')

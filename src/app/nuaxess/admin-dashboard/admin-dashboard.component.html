@@ -220,38 +220,6 @@
                         </mat-tab-group>
                     </div>
                     <div class="container">
-
-
-                    <div class="flex flex-col sm:flex-row flex-0 sm:items-center sm:justify-between p-6 sm:py-8 sm:px-10 border-b bg-card dark:bg-transparent">
-                        <div class="flex-1 min-w-0">
-                            <div class="mt-2">
-                                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight leading-7 sm:leading-10 truncate">
-                                    <button class="btn btn-primary" [routerLink]="['/add-member']">Add Member</button>
-                                </h2>
-                            </div>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="col-xl-12">
-                             </div>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="col-xl-12">
-                             </div>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="col-xl-12">
-                                <a (click)="getProfile(0,'prospect')"><img style="max-width:40px;" src="./assets/icons/excel.png"><br><b>Download Company Template</b></a>
-                            </div>
-                        </div>
-                        <div class="flex-1 min-w-0">
-                
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="col-xl-12">
-                                <a (click)="showUpload()"><img style="max-width:40px;" src="./assets/icons/upload.png"><br><b>Upload Template</b></a>
-                            </div>
-                        </div>
-                    </div>
                     <div *ngIf="uploading=='Y'" class="container-fluid">
                         <div class="row">
                             <div class="col-xl-3">
@@ -295,25 +263,28 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                
+                </div>  
                                 <div class="card card-body" style="margin-top: 20px;">
                                 <div class="row">
                                     <div class="col-md-12 col-xl-12">
                                         <div *ngIf="data.census.length>0" class="card card-body" style="margin-top:20px;">
                                             <div class="table-responsive">
-                                                <h2 style="font-size: 24px;"><b>Active Members ({{ data.month_id }})</b></h2>
-                                            <div class="col-lg-6 py-2">
-                                                Search: <input style="max-width:320px;" class="form-control" type="text" id="term" name="term" [(ngModel)]="term"> 
-                                            </div>
+                                                <div class="row">
+                                                    <div class="col-xl-10">
+                                                        <h2 style="font-size: 24px;"><b>Active Members ({{ data.month_id }})</b></h2>
+                                                        <div class="col-lg-6 py-2">
+                                                            Search: <input style="max-width:320px;" class="form-control" type="text" id="term" name="term" [(ngModel)]="term"> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-2">
+                                                            <a (click)="getProfile(0,'prospect')"><img style="max-width:40px;" src="./assets/icons/excel.png"><br><b>Download Company Template</b></a>
+                                                    </div>
+                                                </div>
                                             <table class="table table-responsive">
                                                 <thead>
                                                     <tr>
                                                         <th>
                                                             Employee ID
-                                                        </th>
-                                                        <th>
-                                                            Dependent ID
                                                         </th>
                                                         <th>
                                                             Last Name
@@ -353,9 +324,6 @@
                                         <tr *ngFor="let m of data.census | filter: term ">
                                             <td>
                                                 {{ m.employee_code }}
-                                            </td>
-                                            <td>
-                                                {{ m.dependent_code }}
                                             </td>
                                             <td>
                                                 {{ m.last_name }}
