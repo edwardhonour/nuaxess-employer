@@ -309,34 +309,6 @@ tuploading: any;
 
       uploadFile2() {
           console.log(this.file_data);
-
-          /*
-          if (this.doc_title=="QUOTING") {
-            this.http.post(this.ip+'upload_quoting_template.php',this.file_data)
-          .subscribe(res => {
-            //location.reload()
-            this.uploading='N'
-            console.log(res.toString)
-          }, (err) => {
-          //send error response
-          alert('error occured')
-        });
-        }
-
-        if (this.doc_title=="ENROLLMENT") {
-            this.http.post(this.ip+'upload_enrollment_template.php',this.file_data)
-          .subscribe(res => {
-            //location.reload()
-            window.open(
-              "https://myna-docs.com/api/"+res.filename);
-            this.uploading='N'
-            console.log(res.toString)
-          }, (err) => {
-          //send error response
-          alert('error occured')
-        });
-        }
-        */
       }
 
         showDoc(id: any) {

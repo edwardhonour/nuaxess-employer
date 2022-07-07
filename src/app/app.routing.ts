@@ -52,6 +52,12 @@ import { AdditionlistComponent } from './nuaxess/additionlist/additionlist.compo
 import { TerminationListComponent } from './nuaxess/termination-list/termination-list.component';
 import { AdditionListComponent } from './nuaxess/addition-list/addition-list.component';
 import { MemberListComponent } from './nuaxess/member-list/member-list.component';
+import { StaffingHomeComponent } from './nuaxess/staffing-home/staffing-home.component';
+import { ResourceHomeComponent } from './nuaxess/resource-home/resource-home.component';
+import { HrHomeComponent } from './nuaxess/hr-home/hr-home.component';
+import { PayrollHomeComponent } from './nuaxess/payroll-home/payroll-home.component';
+import { BenefitsHomeComponent } from './nuaxess/benefits-home/benefits-home.component';
+import { PaymentsHomeComponent } from './nuaxess/payments-home/payments-home.component';
 
 // @formatter:off
 /* eslint-disable max-len */
@@ -138,6 +144,12 @@ export const appRoutes: Route[] = [
             {path: 'user-list', component: UserListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             {path: 'user-list/:id', component: UserListComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             //-- Adds
+            {path: 'staffing-home', component: StaffingHomeComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
+            {path: 'resource-home', component: ResourceHomeComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
+            {path: 'hr-home', component: HrHomeComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
+            {path: 'payroll-home', component: PayrollHomeComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
+            {path: 'benefits-home', component: BenefitsHomeComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
+            {path: 'payments-home', component: PaymentsHomeComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             {path: 'add-broker', component: AddBrokerComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             {path: 'add-company', component: AddCompanyComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
             {path: 'add-company/:id', component: AddCompanyComponent, resolve: { menudata: MenuResolver, data: DataResolver, userdata: UserResolver }, },
