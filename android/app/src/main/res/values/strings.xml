@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">NuAxess Employer</string>
+    <string name="title_activity_main">NuAxess Employer</string>
+    <string name="package_name">com.mynuaxess.www</string>
+    <string name="custom_url_scheme">com.mynuaxess.www</string>
+</resources>
